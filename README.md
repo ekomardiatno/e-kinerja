@@ -8,17 +8,17 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 {
   method: 'GET',
   params: {
-    type: STRING,
-    keyword: STRING,
+    type: STRING, // jenis_aktivitas
+    keyword: STRING, // nama_aktivitas
     page: STRING
   },
   response: {
     status: 'OK',
     data: [
       {
-        id: INTEGER,
-        title: STRING,
-        subtitle: STRING
+        id: INTEGER, // dm_aktivitas_id
+        title: STRING, // nama_aktivitas_id
+        subtitle: STRING // 'Waktu: ' . waktu . ' Menit'
       }
     ]
   }
@@ -30,19 +30,19 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 {
   method: 'GET',
   params: {
-    id: STRING,
-    type: STRING,
-    keyword: STRING,
+    id: STRING, // nip_pegawai
+    type: STRING, // jenis_aktivitas
+    keyword: STRING, // kegiatan
     page: STRING
   },
   response: {
     status: 'OK',
     data: [
       {
-        id: INTEGER,
-        title: STRING,
+        id: INTEGER, // sasaran_detail_id
+        title: STRING, // kegiatan
         params: {
-          output: STRING
+          output: STRING // satuan_output
         }
       }
     ]
@@ -89,19 +89,19 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 {
   method: 'GET',
   params: {
-    id: STRING
+    id: STRING // aktivitas_id
   },
   body: {
     status: 'OK',
     data: {
       aktivitas: {
-        id: INTEGER,
-        title: STRING,
-        subtitle: STRING
+        id: INTEGER, // dm_aktivitas_id
+        title: STRING, // nama_aktivitas
+        subtitle: STRING // 'Waktu: ' . waktu . ' Menit'
       },
       sasaran: {
-        id: INTEGER,
-        title: STRING
+        id: INTEGER, // sasaran_detail_id
+        title: STRING // kegiatan
       },
       satuan_output: STRING,
       tipe: STRING,
@@ -121,7 +121,7 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 {
   method: 'POST',
   params: {
-    id: STRING
+    id: STRING // aktivitas_id
   },
   body: {
     dm_aktivitas_id: STRING,
@@ -159,7 +159,7 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 {
   method: 'POST',
   body: {
-    id: STRING
+    id: STRING // aktivitas_id
   },
   response: {
     status: 'OK'
@@ -172,8 +172,8 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 {
   method: 'GET',
   params: {
-    date: DATE,
-    id: STRING
+    date: DATE, // tanggal
+    id: STRING // nip_pegawai
   },
   body: {
     status: 'OK',
