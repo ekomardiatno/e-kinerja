@@ -7,6 +7,9 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 ```javascript
 {
   method: 'GET',
+  header: {
+    authorization_key: STRING
+  },
   params: {
     type: STRING, // jenis_aktivitas
     keyword: STRING, // nama_aktivitas
@@ -29,6 +32,9 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 ```javascript
 {
   method: 'GET',
+  header: {
+    authorization_key: STRING
+  },
   params: {
     id: STRING, // nip_pegawai
     type: STRING, // jenis_aktivitas
@@ -54,6 +60,9 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 ```javascript
 {
   method: 'POST',
+  header: {
+    authorization_key: STRING
+  },
   body: {
     dm_aktivitas_id: STRING,
     sasaran_detail_id: STRING,
@@ -88,6 +97,9 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 ```javascript
 {
   method: 'GET',
+  header: {
+    authorization_key: STRING
+  },
   params: {
     id: STRING // aktivitas_id
   },
@@ -120,6 +132,9 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 ```javascript
 {
   method: 'POST',
+  header: {
+    authorization_key: STRING
+  },
   params: {
     id: STRING // aktivitas_id
   },
@@ -158,6 +173,9 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 ```javascript
 {
   method: 'POST',
+  header: {
+    authorization_key: STRING
+  },
   body: {
     id: STRING // aktivitas_id
   },
@@ -171,6 +189,9 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 ```javascript
 {
   method: 'GET',
+  header: {
+    authorization_key: STRING
+  },
   params: {
     date: DATE, // tanggal
     id: STRING // nip_pegawai
