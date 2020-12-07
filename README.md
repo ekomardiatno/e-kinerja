@@ -103,7 +103,7 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
   params: {
     id: STRING // aktivitas_id
   },
-  body: {
+  response: {
     status: 'OK',
     data: {
       aktivitas: {
@@ -196,7 +196,7 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
     date: DATE, // tanggal
     id: STRING // nip_pegawai
   },
-  body: {
+  response: {
     status: 'OK',
     data: [
       {
@@ -217,3 +217,59 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 }
 ```
 ---
+## **Get Subs List Request**
+```javascript
+{
+  method: 'GET',
+  header: {
+    authorization_key: STRING
+  },
+  params: {
+    id: STRING, // pejabat_penilai
+  },
+  response: {
+    status: 'OK',
+    data: [
+      {
+        nip_pegawai: STRING,
+        nama_pegawai: STRING,
+        foto_pegawai: URL
+      }
+    ]
+  }
+}
+```
+---
+## **Verify Activity Request**
+```javascript
+{
+  method: 'POST',
+  header: {
+    authorization_key: STRING
+  },
+  body: {
+    id: STRING, // aktivitas_id
+    verify_status: STRING, // is_verified, 1/2
+  },
+  response: {
+    status: 'OK'
+  }
+}
+```
+---
+## **Multi Verify Activity Request**
+```javascript
+{
+  method: 'POST',
+  header: {
+    authorization_key: STRING
+  },
+  body: {
+    users: JSON_STRINGIFY, // [nip_pegawai]
+    verify_status: STRING, // is_verified, 1/2
+  },
+  response: {
+    status: 'OK'
+  }
+}
+```
