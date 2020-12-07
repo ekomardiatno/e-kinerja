@@ -225,7 +225,8 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
     authorization_key: STRING
   },
   params: {
-    id: STRING, // pejabat_penilai
+    id: STRING, // pejabat_penilai,
+    keyword: STRING, // nama_pegawai,
   },
   response: {
     status: 'OK',
