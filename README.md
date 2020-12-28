@@ -8,7 +8,7 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 {
   method: 'GET',
   header: {
-    authorization_key: STRING
+    token_key: STRING
   },
   params: {
     type: STRING, // jenis_aktivitas
@@ -33,7 +33,7 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 {
   method: 'GET',
   header: {
-    authorization_key: STRING
+    token_key: STRING
   },
   params: {
     id: STRING, // nip_pegawai
@@ -61,7 +61,7 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 {
   method: 'POST',
   header: {
-    authorization_key: STRING
+    token_key: STRING
   },
   body: {
     dm_aktivitas_id: STRING,
@@ -98,7 +98,7 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 {
   method: 'GET',
   header: {
-    authorization_key: STRING
+    token_key: STRING
   },
   params: {
     id: STRING // aktivitas_id
@@ -133,7 +133,7 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 {
   method: 'POST',
   header: {
-    authorization_key: STRING
+    token_key: STRING
   },
   params: {
     id: STRING // aktivitas_id
@@ -174,7 +174,7 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 {
   method: 'POST',
   header: {
-    authorization_key: STRING
+    token_key: STRING
   },
   body: {
     id: STRING // aktivitas_id
@@ -190,7 +190,7 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 {
   method: 'GET',
   header: {
-    authorization_key: STRING
+    token_key: STRING
   },
   params: {
     date: DATE, // tanggal
@@ -222,7 +222,7 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 {
   method: 'GET',
   header: {
-    authorization_key: STRING
+    token_key: STRING
   },
   params: {
     id: STRING, // pejabat_penilai,
@@ -246,7 +246,7 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 {
   method: 'POST',
   header: {
-    authorization_key: STRING
+    token_key: STRING
   },
   body: {
     id: STRING, // aktivitas_id
@@ -263,7 +263,7 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 {
   method: 'POST',
   header: {
-    authorization_key: STRING
+    token_key: STRING
   },
   body: {
     users: JSON_STRINGIFY, // [nip_pegawai]
