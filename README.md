@@ -93,7 +93,7 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 }
 ```
 ---
-## **Get Activity Created List for Edit Request**
+## **Get Created Activity for Edit Request**
 ```javascript
 {
   method: 'GET',
@@ -185,7 +185,7 @@ OK | BAD_REQUEST | EMPTY | UNAUTHORIZED | EXPIRED
 }
 ```
 ---
-## **Get Activity Created List for History Request**
+## **Get Created Activity List for History Request**
 ```javascript
 {
   method: 'GET',
